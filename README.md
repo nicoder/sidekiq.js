@@ -51,7 +51,7 @@ Official documentation is in the GitHub wiki.
 # License
 
 Sidekiq.js is licensed under the Gnu LGPLv3 license.
-Project members are expected to adhere to the Contributor Convenant v1.4.
+Project members are expected to adhere to the [Contributor Convenant v1.4](http://contributor-covenant.org/version/1/4/).
 
 # Author
 
