@@ -19,6 +19,16 @@ By default, each sidekiq process will execute up to 25 jobs concurrently.
 While Node.js is single-threaded, sidekiq will switch between
 jobs while waiting for I/O.
 
+# Status
+
+Sidekiq.js is **not** ready for any usage at all.  It is still under
+construction as I learn JavaScript but your help is welcome.  I want to
+make Sidekiq.js native and idiomatic, not just port the Ruby straight over -
+if something looks off, please let me know!
+
+The goal is to make Sidekiq.js 100% compatible with Sidekiq.rb with
+regard to the data stored in Redis.
+
 # Installation
 
 All official Sidekiq packages use the @mperham scope.  Any top-level
@@ -30,14 +40,13 @@ sidekiq packages are 3rd party and not part of this project.
 
 If there is enough demand for them, I will port Sidekiq Pro
 and Sidekiq Enterprise to Sidekiq.js.  If you are interested in buying
-them and supporting this project, please email me and let me know: mike
-AT contribsys.com.
+them and supporting this project, please email me and let me know so I
+can gauge interest: mike AT contribsys.com.
 
 # Support
 
-If you have problems, please ask on StackOverflow with the `sidekiq`
-tag. Open an issue if you think you have found a bug.  Official
-documentation is in the GitHub wiki.
+Open an issue if you think you have found a bug.
+Official documentation is in the GitHub wiki.
 
 # License
 
