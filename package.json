@@ -4,12 +4,13 @@
   "description": "Simple, efficient background jobs for Node.js",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "eslint lib && mocha"
   },
   "author": "Mike Perham",
   "license": "LGPL-3.0",
   "devDependencies": [
-    "mocha"
+    "mocha",
+    "eslint"
   ],
   "dependencies": [
     "minimist",
