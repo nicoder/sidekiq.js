@@ -1,0 +1,19 @@
+{
+  "name": "@mperham/sidekiq",
+  "version": "0.5.0",
+  "description": "Simple, efficient background jobs for Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Mike Perham",
+  "license": "LGPL-3.0",
+  "devDependencies": [
+    "mocha"
+  ],
+  "dependencies": [
+    "minimist",
+    "ioredis",
+    "generic-pool"
+  ]
+}
