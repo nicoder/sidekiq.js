@@ -8,18 +8,6 @@ Redis.Promise.onPossiblyUnhandledRejection(function (err) {
   console.error(err)
 })
 
-Pool.prototype.exec = function (fn) {
-  var self = this
-  self.acquire(function (err, client) {
-    if (err) {
-      throw new Error('Something')
-    } else {
-      fn(client)
-      self.release(client)
-    }
-  })
-}
-
 var pool = new Pool({
   name: 'sidekiq.js',
   create: function (callback) {
@@ -47,8 +35,11 @@ var pool = new Pool({
 })
 
 // TODO: Need to make this blocking so the flushdb doesn't happen mid-test.
-pool.exec((conn) => {
-  conn.flushdb()
+pool.acquire((err, conn) => {
+  if (err) throw err
+  conn.flushdb(function () {
+    pool.release(conn)
+  })
 })
 
 var SidekiqClient = require('../lib/client').SidekiqClient
